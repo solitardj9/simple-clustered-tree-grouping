@@ -1,0 +1,21 @@
+server:
+  port: 19971
+  
+spring:
+  application:
+    name: group_test
+  profiles:
+    active: jdbc
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://127.0.0.1:3306/group_test?createDatabaseIfNotExist=true
+    username: test
+    password: s3af57ed4frwe
+    initialization-mode: always
+    continue-on-error: true
+  main:
+    allow-bean-definition-overriding: true
+  jpa:    
+    hibernate:
+      ddl-auto: none
+    show-sql: false
